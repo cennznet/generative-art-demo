@@ -50,10 +50,10 @@ def generate_image():
     image_size = 1000
     squares_across = 10
     background_colour = (0, 0, 0)
-    colours_min_max = [(1, .5, .1), (1, 1, 1)]
-    size_min_max = [.3, .8]
-    rotation_min_max = [-10, 10]
-    line_thickness_min_max = [2, 20]
+    colours_min_max = [(0, 0, 0), (1, 1, 0)]
+    size_min_max = [0, 1]
+    rotation_min_max = [0, 90]
+    line_thickness_min_max = [1, 5]
 
     ims = cairo.ImageSurface(cairo.FORMAT_ARGB32, image_size, image_size)
     cr = cairo.Context(ims)
@@ -90,7 +90,7 @@ def generate_image():
                 line_thickness
             )
 
-    ims.write_to_png('GeneratedImage.png')
+    ims.write_to_png('Generated_Image.png')
     print("Finished: " + str(datetime.now() - start))
 
 
