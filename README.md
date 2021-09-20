@@ -23,8 +23,14 @@ as a .png
 The script can easily be altered to produce a wide variety of generated images and 
 with further alterations, can loop through and randomly generate any amount that you like.
 
-To get started, simply set up your Python virtual environment on your local machine and
-run the GenerateArt.py script.
+To get started, simply set up your Python virtual environment on your local machine, 
+install the dependencies specified by the requirements.txt file and
+run the GenerateArt.py script. Python version used for demo 3.9.6
+
+Run the following command to install the requirements
+```bash
+pip install -r requirements.txt
+```
 ### Here are some example outputs of what the generator can produce
 
 ![](GeneratedExamples/Generated_Image_1.png)

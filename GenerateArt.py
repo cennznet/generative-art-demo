@@ -20,7 +20,7 @@ def draw_shape(
         square_size,
         line_thickness
 ):
-    cr.set_source_rgb(colour[0], colour[1], colour[2])
+    cr.set_source_rgba(colour[0], colour[1], colour[2], 1)
     cr.set_line_width(line_thickness)
     # Rotate the shape by moving to the centre point and rotating the whole screen, then moving back
     cr.translate(position[0], position[1])
@@ -50,10 +50,10 @@ def generate_image():
     image_size = 1000
     squares_across = 10
     background_colour = (0, 0, 0)
-    colours_min_max = [(0, 0, 0), (1, 1, 0)]
-    size_min_max = [0, 1]
-    rotation_min_max = [0, 90]
-    line_thickness_min_max = [1, 5]
+    colours_min_max = [(0, 0, 0), (1, 1, 1)]
+    size_min_max = [1, 1]
+    rotation_min_max = [0, 0]
+    line_thickness_min_max = [5, 5]
 
     ims = cairo.ImageSurface(cairo.FORMAT_ARGB32, image_size, image_size)
     cr = cairo.Context(ims)
